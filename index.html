@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cricket Academy Registration Form</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.package-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.package-table th,
+.package-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.package-table th {
+  background-color: #f0f0f0;
+}
+
+.package-table input[type="radio"] {
+  margin-right: 5px;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Cricket Academy by Rohit Sharma <br> Registration Form</h2>
+    <h3>PLAYER'S PARTICULAR</h3>
+<form action="RegistrationServlet" method="POST">
+    <table>
+    <tr>
+     <td><label for="first-name">First Name:</label></td>
+    <td><input type="text" id="first-name" name="first-name"></td>
+  </tr>
+ <tr>
+    <td><label for="last-name">Last Name:</label></td>
+    <td><input type="text" id="last-name" name="last-name"></td>
+  </tr>
+
+  <tr>
+   <td><label for="dob">Date of Birth:</label></td>
+    <td><input type="date" id="dob" name="dob"></td>
+  </tr>
+
+  <tr>
+    <td><label for="gender">Gender:</label></td>
+   <td><select id="gender" name="gender">
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    </td>
+    </tr>
+  
+  <tr>
+   <td><label for="duration">Duration:</label></td>
+   <td><input type="text" id="duration" name="duration"></td>
+
+    <tr>
+        <td><label for="batch time">Batch Time:</label></td>
+       <td><input type="time" id="batch time" name="batch time"></td>
+    
+    </tr>
+    <tr>
+        <td><label for="uniform">Uniform</label></td>
+       <td><input type="text" id="uniform" name="uniform"></td>
+    </tr>
+
+</table>
+
+    <h3>PARENT/GUARDIAN'S CONTACT DETAILS</h3>
+    <table>
+        <tr>
+    <td><label for="full-name">Full Name:</label></td>
+    <td><input type="text" id="full-name" name="full-name"></td>
+  </tr>
+
+  <tr>
+    <td><label for="mobile">Mobile Number:</label></td>
+    <td><input type="text" id="mobile" name="mobile"></td>
+  </tr>
+
+  <tr>
+    <td><label for="email">Email for communication:</label></td>
+    <td><input type="text" id="email" name="email"></td>
+  </tr>
+
+  <tr>
+    <td><label for="address">Address:</label></td>
+    <td><input type="text" id="address" name="address"></td>
+  </tr>
+
+  <table class="package-table">
+    <thead>
+      <tr>
+        <th>No of Sessions Per Week</th>
+        <th>Weekly 2 Session</th>
+        <th>Weekly 3 Sessions</th>
+        <th>Weekly 6 Sessions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monthly</td>
+        <td><input type="checkbox" name="package" value="monthly-2"> 2,900</td>
+        <td><input type="checkbox" name="package" value="monthly-3"> 3,900</td>
+        <td><input type="checkbox" name="package" value="monthly-6"> 4,900</td>
+      </tr>
+      <tr>
+        <td>Quarterly</td>
+        <td><input type="checkbox" name="package" value="quarterly-2"> 6,900</td>
+        <td><input type="checkbox" name="package" value="quarterly-3"> 7,900</td>
+        <td><input type="checkbox" name="package" value="quarterly-6"> 8,900</td>
+      </tr>
+      <tr>
+        <td>Half Yearly</td>
+        <td><input type="checkbox" name="package" value="half yearly">12,900</td>
+        <td><input type="checkbox" name="package" value="half yearly">14,900</td>
+        <td><input type="checkbox" name="package" value="half yearly">16,900</td>
+        <tr>
+            <td>Yearly</td>
+        <td><input type="checkbox" name="package" value="yearly">22,900</td>
+        <td><input type="checkbox" name="package" value="yearly">25,900</td>
+        <td><input type="checkbox" name="package" value="yearly">29,900</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button type="submit" class="submit-btn">Submit</button>
+</form>
+</div>
+</body>
+</html>
